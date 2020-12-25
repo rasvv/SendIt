@@ -5,34 +5,56 @@
 
 html
 	font-family: 'Myriad Pro', 'Myriad Pro', 'Myriad Pro', 'Myriad Pro',sans-serif
-	color: $mainTextColor
+	color: $other1Color
 
 h1
 	+font(48px, 58px, 900)
 
 h2
-	+font(36px, 43px, 600)
+	+font(36px, 43px, 700)
 
 h3
-	+font(30px, 36px, 400)
+	+font(30px, 36px, 600)
 
 p
-	+font(16px, 19px, 100)
-
-	// @import "media1"
-// @import "media2"
+	+font(16px, 19px, 300)
 
 .container
 	width: 1160px
 	margin: 0 auto
 
+.button
+	height: 48px
+	width: 360px
+	display: inline-block
+	+font(16px, 48px, 600)
+	text-align: center
+	color: $other4Color
+	background-color: $main1Color
+	text-transform: uppercase
+	border-radius: 30px
+	&:hover
+		box-shadow: 0px 4px 15px rgba(27, 170, 235, 0.45)
+
+	&__other
+		height: 48px
+		width: 360px
+		display: inline-block
+		+font(18px, 48px, 600)
+		text-align: center
+		background-color: $main3Color
+		text-transform: uppercase
+		border-radius: 30px
+		&:hover
+			box-shadow: 0px 4px 20px rgba(255, 204, 0, 0.55)
+
 .header
 	height: 525px
 	position: relative
-	color: $mainColor
+	color: $other4Color
 
 	& a
-		color: $mainColor
+		color: $other4Color
 
 	&__background
 		position: absolute
@@ -46,11 +68,14 @@ p
 		display: flex
 		padding-top: 29px
 		margin-bottom: 88px
+
 	&__logo
 		width: 160px
 		height: 46px
+
 	&__menu
 		width: calc(100% - 160px)
+
 	&__items
 		display: flex
 		align-items: center
@@ -66,12 +91,104 @@ p
 	&__subcaption
 		margin-bottom: 35px
 
-	&__link
+.subheader
+
+	background-color: #F7F7F7
+	&__body
+		height: 457px
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+	&__right
+		width: 438px
+
+	&__caption
+		margin-bottom: 22px
+
+	&__text
+		margin-bottom: 32px
+		color: #000
+
+.steps
+	color: #000000
+
+	padding: 69px 0 32px
+
+	&__body
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-around
+
+	&__step
+		max-width: 460px
+
+	&__image
+		margin-bottom: 41px
+
+	&__caption
+		margin-bottom: 9px
+
+	&__text
+		+font(20px, 24px, 300)
+		height: 93px
+		margin-bottom: 36px
+
+.sending
+	background-color: #f7f7f7
+	height: 180px
+	display: flex
+	align-items: center
+	&__body
+		display: flex
+		align-items: center
+		justify-content: space-between
+
+.callback
+	height: 240px
+	background-color: $main1Color
+	color: $other4Color
+	&__body
+		height: 100%
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+	&__caption
+		text-transform: uppercase
+		margin-bottom: 16px
+
+	&__text
+		+font(24px, 23px, 400)
+
+	&__right
+		height: 100%
+		display: flex
+		flex-direction: column
+		justify-content: center
+		// align-items: center
+	&__input
 		height: 48px
 		width: 360px
 		display: inline-block
-		+font(18px, 48px, 600)
-		text-align: center
-		background-color: $mainBtnColor
-		text-transform: uppercase
-		border-radius: 24px
+		+font(16px, 48px, 100)
+		text-align: left
+		padding: 0 21px
+		color: $other4Color
+		background-color: $main1Color
+		border-radius: 30px
+		border: 1px solid $other4Color
+		box-sizing: border-box
+		margin-bottom: 9px
+	&__link
+		margin-bottom: 16px
+		color: $other1Color
+
+	&__check
+		& input
+			background-color: $main1Color
+		& label
+			+font(10px, 12px, 100)
+
+// @import "media1"
+// @import "media2"
