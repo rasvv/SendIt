@@ -94,13 +94,13 @@ p
 		margin-bottom: 35px
 
 .subheader
-
+	height: 457px
 	background-color: #F7F7F7
 	&__body
-		height: 457px
-		display: flex
-		justify-content: space-between
-		align-items: center
+
+		display: grid
+		grid-template-columns: 438px 660px
+		grid-template-rows:
 
 	&__right
 		width: 438px
@@ -190,12 +190,10 @@ p
 		color: $other1Color
 
 	&__check
-		& input
-			background-color: $main1Color
 		& label
 			+font(10px, 12px, 100)
-			&::before
-				background-color: $main1Color
+		&::before
+			background-color: $main1Color
 
 .feedback
 	min-height: 547px
@@ -327,6 +325,7 @@ p
 		align-items: center
 		position: relative
 		font-weight: 400
+		cursor: pointer
 
 		&::after
 			position: absolute
@@ -409,14 +408,22 @@ p
 		height: 50px
 		width: 362px
 		border-radius: 25px
-		padding: 18px 60px 10px 30px
+		padding: 0 60px 0 30px
 		box-sizing: border-box
+		line-height: 50px
+		background-color: #E9E9E9
 
 	&__link
 
 	&__check
 		+font(10px, 12px, 300)
 		width: 100%
+		& input[type=checkbox]
+			// display: none
+			background-color: #000
+		&::before
+			display: none
+			background-color: #000
 
 .line
 	width: 100%
