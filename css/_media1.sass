@@ -1,0 +1,249 @@
+@media  (max-width: 1159px)
+
+	h1
+		+font(44px, 52px, 900)
+
+	h3
+		+font(30px, 36px, 600)
+
+	p
+		+font(14px, 16px, 300)
+
+	.container
+		max-width: calc(100% - 64px)
+		margin: 0 auto
+
+	.button
+		width: 280px
+
+	.arrow svg
+		width: 16px
+		height: 16px
+
+	.header
+		height: 415px
+		&__top
+			margin-bottom: 55px
+
+		&__logo
+
+			// margin-left: 32px
+		&__menu
+			width: calc(100vw - 192px)
+			padding: 0 0 0 20px
+
+		&__item
+			+font(14px, 16px, 300)
+
+		&__caption
+			padding-right: 300px
+		&__subcaption
+			+font(28px, 34px, 600)
+
+	.subheader
+		height: 314px
+
+		&__body
+			display: grid
+			grid-template-columns: 280px 1fr
+			grid-template-rows: 69px 1fr 99px
+			grid-column-gap: 26px
+		&__caption
+			grid-row: 1
+			grid-column: 1/3
+			padding-top: 17px
+
+		&__text
+			grid-column: 1
+			grid-row: 2
+			margin-bottom: 32px
+			color: #000
+
+		&__link
+			grid-column: 1
+			grid-row: 3
+
+		&__img
+			padding: 0
+			height: 100%
+			width: 100%
+			object-fit: contain
+			text-align: right
+			object-position: center right
+			&-cont
+				grid-column: 2
+				grid-row: 2/3
+				width: 100%
+				height: 215px
+
+	.steps
+		padding-top: 38px
+		&__step
+			width: calc((100% - 144px) / 2)
+		&__image
+			width: 100%
+			// height: 100%
+			object-fit: contain
+			margin-bottom: 32px
+
+	.sending
+		height: 124px
+
+		&__caption
+			padding-right: 30px
+			+font(28px, 34px, 700)
+
+	.callback
+		height: 171px
+		&__caption
+			+font(28px, 34px, 700)
+		&__text
+			+font(14px, 13px, 400)
+			padding-right: 124px
+		&__right
+			width: 280px
+
+	.feedback
+		padding-top: 48px
+		padding-bottom: 48px
+		min-height: auto
+		&__caption
+			margin-bottom: 26px
+
+			// object-fit: contain
+
+	.card
+		width: 280px
+
+		&__top
+			margin-bottom: 14px
+		&__img
+			width: 100px
+			height: 100px
+			object-fit: contain
+		&__description
+			padding-left: 20px
+		&__name
+			+font(26px, 26px, 400)
+			margin-bottom: 4px
+
+		&__firm
+			+font(18px, 22px, 400)
+			margin-bottom: 6px
+
+		&__type,
+		&__from,
+		&__to
+			+font(10px, 12px, 300)
+
+		&__text
+			font-weight: 400
+
+	.advantages
+		height: 314px
+		padding-top: 37px
+
+		&__caption
+			margin-bottom: 24px
+
+		&__box
+
+		&__item
+			width: 100px
+			&:nth-child(3) img
+				width: 42px
+				height: 42px
+			&:nth-child(4) img
+				width: 43px
+				height: 43px
+			&:nth-child(5) img
+				width: 44px
+				height: 44px
+
+		&__icon
+			width: 100px
+			height: 100px
+			border-radius: 50px
+
+			& img
+				width: 48px
+				height: 48px
+
+		&__text
+			+font(12px, 14px, 400)
+
+	.guarantees
+		height: 437px
+		padding-top: 47px
+
+		&__caption
+			margin-bottom: 16px
+
+		&__item
+			width: 220px
+
+		&__icon
+			width: 100px
+			height: 100px
+			border-radius: 50px
+			margin-bottom: 18px
+
+			& img
+				width: 48px
+				height: 48px
+
+		&__title
+			+font(20px, 24px, 600)
+		&__text
+			+font(12px, 14px, 400)
+			height: 100px
+		&__link
+			width: 220px
+
+	.doubts
+		height: 477px
+		padding-top: 41px
+
+		&__caption
+			margin-bottom: 12px
+
+		&__box
+			display: block
+		&__column
+			width: 100%
+
+		&__list
+			height: 48px
+			width: 100%
+			+font(16px, 19px, 400)
+			margin-bottom: 10px
+
+			&::after
+				top: 20px
+
+	.brands
+		height: 112px
+		&__item img
+			width: 66px
+
+	.footer
+		height: 234px
+
+		&__body
+
+		&__menu
+			height: 79px
+		&__net img
+			width: 13px
+			height: 13px
+		&__bottom
+			height: 44px
+
+	.questions
+		&__caption
+			+font(20px, 24px, 700)
+			width: 330px
+
+		&__input, 	&__link
+			height: 48px
+			width: 220px

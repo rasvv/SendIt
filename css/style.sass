@@ -20,7 +20,7 @@ p
 	+font(16px, 19px, 300)
 
 .container
-	width: 1160px
+	max-width: 1160px
 	margin: 0 auto
 
 .button
@@ -37,14 +37,7 @@ p
 		box-shadow: 0px 4px 15px rgba(27, 170, 235, 0.45)
 
 	&__other
-		height: 48px
-		width: 360px
-		display: inline-block
-		+font(18px, 48px, 600)
-		text-align: center
 		background-color: $main3Color
-		text-transform: uppercase
-		border-radius: 30px
 		&:hover
 			box-shadow: 0px 4px 20px rgba(255, 204, 0, 0.55)
 
@@ -66,22 +59,26 @@ p
 
 	&__top
 		display: flex
+		width: 100%
 		padding-top: 29px
 		margin-bottom: 88px
 
 	&__logo
+		// flex-grow: 160px
 		width: 160px
 		height: 46px
 
 	&__menu
-		width: calc(100% - 160px)
+		// flex-grow: calc(100% - 160px)
+		width: calc(100vw - 160px)
+		padding: 0 0 0 140px
 
 	&__items
 		display: flex
+
 		align-items: center
 		justify-content: space-between
 		height: 46px
-		padding: 0 0 0 140px
 
 	&__item
 		+font(18px, 22px, 400)
@@ -96,21 +93,46 @@ p
 .subheader
 	height: 457px
 	background-color: #F7F7F7
+	width: 100%
 	&__body
 
 		display: grid
-		grid-template-columns: 438px 660px
-		grid-template-rows:
+		grid-template-columns: 438px 1fr
+		grid-template-rows: 199px 106px 152px
+		grid-column-gap: 62px
 
 	&__right
-		width: 438px
+		width: 100%
 
 	&__caption
+		grid-row: 1/2
+		grid-column: 1
 		margin-bottom: 22px
+		padding-top: 95px
 
 	&__text
+		grid-column: 1
+		grid-row: 2
 		margin-bottom: 32px
 		color: #000
+
+	&__link
+		grid-column: 1
+		grid-row: 3
+
+	&__img
+		padding: 61px 0 0 0
+		text-align: right
+		object-position: center right
+
+		&-cont
+			grid-column: 2
+			grid-row: 1/4
+			width: 100%
+			height: 457px
+			display: flex
+			align-items: end
+			// text-align: right
 
 .steps
 	color: #000000
@@ -133,8 +155,8 @@ p
 
 	&__text
 		+font(20px, 24px, 300)
-		height: 93px
-		margin-bottom: 36px
+		// height: 93px
+		margin-bottom: 66px
 
 .sending
 	background-color: #f7f7f7
@@ -142,9 +164,13 @@ p
 	display: flex
 	align-items: center
 	&__body
+
+		width: 1160px
 		display: flex
 		align-items: center
 		justify-content: space-between
+	&__caption, &__link
+		display: inline-block
 
 .callback
 	height: 240px
@@ -155,6 +181,9 @@ p
 		display: flex
 		justify-content: space-between
 		align-items: center
+
+	&__left
+		padding-right: 32px
 
 	&__caption
 		text-transform: uppercase
@@ -171,7 +200,7 @@ p
 		// align-items: center
 	&__input
 		height: 48px
-		width: 360px
+		width: 100%
 		display: inline-block
 		+font(16px, 48px, 100)
 		text-align: left
@@ -208,7 +237,7 @@ p
 		align-items: center
 
 .arrow:hover svg path
-	stroke: $main1Color
+	stroke: $main1Color svg path
 
 .card
 	max-width: 460px
@@ -429,5 +458,5 @@ p
 	width: 100%
 	border: 1px solid #C4C4C4
 
-// @import "media1"
+@import "media1"
 // @import "media2"
