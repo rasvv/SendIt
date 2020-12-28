@@ -8,3 +8,33 @@
 
 	p
 		+font(14px, 16px, 300)
+
+	.container
+		max-width: calc(100% - 42px)
+
+	.header
+		min-height: 532px
+		background: url('../img/header-background-small.jpg') no-repeat
+		background-size: 100%
+
+		&__background
+			opacity: 0
+			display: block
+
+			&__top
+				margin-bottom: 55px
+
+		&__logo
+			width: 100px
+			height: 29px
+			// margin-left: 32px
+		&__menu
+			display: none
+
+		&__item
+			+font(14px, 16px, 300)
+
+		&__caption
+			color: #000
+		&__subcaption
+			+font(28px, 34px, 600)

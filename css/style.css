@@ -874,7 +874,6 @@ p {
   }
   .container {
     max-width: calc(100% - 64px);
-    margin: 0 auto;
   }
   .button {
     width: 280px;
@@ -1180,6 +1179,41 @@ p {
     font-size: 14px;
     line-height: 16px;
     font-weight: 300;
+  }
+  .container {
+    max-width: calc(100% - 42px);
+  }
+  .header {
+    min-height: 532px;
+    background: url("../img/header-background-small.jpg") no-repeat;
+    background-size: 100%;
+  }
+  .header__background {
+    opacity: 0;
+    display: block;
+  }
+  .header__background__top {
+    margin-bottom: 55px;
+  }
+  .header__logo {
+    width: 100px;
+    height: 29px;
+  }
+  .header__menu {
+    display: none;
+  }
+  .header__item {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 300;
+  }
+  .header__caption {
+    color: #000;
+  }
+  .header__subcaption {
+    font-size: 28px;
+    line-height: 34px;
+    font-weight: 600;
   }
 }
 /*# sourceMappingURL=style.css.map */
