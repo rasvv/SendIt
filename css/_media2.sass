@@ -38,13 +38,42 @@
 			// max-height: 420px
 			height: 288px
 			margin-bottom: 21px
+			position: relative
 
 		&__logo
 			width: 100px
 			height: 29px
 			// margin-left: 32px
+
+		& #switcher
+			position: absolute
+			z-index: -1
+			overflow: hidden
+
+			&:checked ~ .menu
+				right: 0
+				top: 70px
+
 		&__menu
-			display: none
+			position: absolute
+			overflow: hidden
+			top: -1000px
+			box-shadow: 0 0 10px #EBEBEB
+			right: 0
+			width: $widthMenu
+			z-index: 10
+			+font(14px, 17px, 400)
+			transition: all ease 0.5s
+
+		&__burger
+			display: block
+			position: absolute
+			right: 21px
+			top: 32px
+			cursor: pointer
+
+		// &__menu
+		// 	display: none
 
 		&__item
 			// +font(14px, 16px, 300)
