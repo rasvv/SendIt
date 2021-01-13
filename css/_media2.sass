@@ -40,19 +40,18 @@
 			margin-bottom: 21px
 			position: relative
 
+		& #switcher
+
+			&:checked ~.submenu
+				display: block
+
+			&:checked .subheader
+				display: block
+
 		&__logo
 			width: 100px
 			height: 29px
 			// margin-left: 32px
-
-		& #switcher
-			position: absolute
-			z-index: -1
-			overflow: hidden
-
-			&:checked ~ .menu
-				right: 0
-				top: 70px
 
 		&__menu
 			position: absolute
@@ -71,9 +70,10 @@
 			right: 21px
 			top: 32px
 			cursor: pointer
+			z-index: 11
 
-		// &__menu
-		// 	display: none
+		&__submenu
+			display: none
 
 		&__item
 			// +font(14px, 16px, 300)
@@ -91,6 +91,10 @@
 
 		&__link
 			margin-bottom: 27px
+
+	.submenu
+		&__link
+			width: 100%
 
 	.subheader
 		height: auto

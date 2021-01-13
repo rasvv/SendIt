@@ -33,13 +33,18 @@ p
 	background-color: $main1Color
 	text-transform: uppercase
 	border-radius: 30px
+	transition: all ease 0.5s
 	&:hover
 		box-shadow: 0px 4px 15px rgba(27, 170, 235, 0.45)
+		color: $main1Color
+		background-color: $other4Color
 
 	&__other
 		background-color: $main3Color
 		&:hover
-			box-shadow: 0px 4px 20px rgba(255, 204, 0, 0.55)
+			box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.45)
+			color: $other4Color
+			background-color: $main1Color
 
 .header
 	height: 525px
@@ -62,6 +67,7 @@ p
 		width: 100%
 		padding-top: 29px
 		margin-bottom: 88px
+		position: relative
 
 	&__burger
 		display: none
@@ -70,6 +76,11 @@ p
 		// flex-grow: 160px
 		width: 160px
 		height: 46px
+
+	& #switcher
+		position: absolute
+		z-index: -10
+		overflow: hidden
 
 	&__menu
 		// flex-grow: calc(100% - 160px)
@@ -81,17 +92,93 @@ p
 
 		align-items: center
 		justify-content: space-between
-		height: 46px
+		column-gap: 46px
 
 	&__item
 		+font(18px, 22px, 400)
+		transition: all ease 0.5s
 		&:hover
-			font-weight: 600
+			color: $main1Color
+			background-color: $other4Color
 
 	&__caption
 		margin-bottom: 22px
 	&__subcaption
 		margin-bottom: 35px
+
+.submenu
+	padding: 13px 23px
+	min-width: 320px
+	background-color: $other4Color
+	color: #000000
+	position: absolute
+	top: 0px
+	left: -21px
+	height: 616px
+	width: 100vw
+	z-index: 10
+	display: none
+	transform: all ease 0.5s
+
+	&__logo
+		margin-bottom: 21px
+		width: 160px
+		height: 48px
+
+	&__closebtn
+		position: absolute
+		top: 24px
+		right: 24px
+		width: 30px
+		height: 30px
+		transition: all ease 500ms
+
+		&:hover
+			transform: rotate(360deg)
+
+	&__menu
+
+	&__items
+
+		& a
+			color: #000000
+
+		& li
+			padding-bottom: 20px
+
+	&__item
+		+font(18px, 22px, 400)
+
+	&__questions
+
+	&__caption
+		+font(18px, 22px, 700)
+		margin-bottom: 10px
+
+	&__input
+		width: 100%
+		height: 40px
+		border-radius: 20px
+		border: 1px solid $other1Color
+		padding-left: 23px
+		padding-right: 46px
+		box-sizing: border-box
+		margin-bottom: 10px
+
+	&__link
+		width: 100%
+		box-sizing: border-box
+		line-height: 40px
+		height: 40px
+
+	&__nets
+		margin-top: 12px
+		display: flex
+		justify-content: space-between
+
+	&__net
+		width: 36px
+		height: 36px
 
 .subheader
 	height: 457px
@@ -238,6 +325,9 @@ p
 		display: flex
 		justify-content: space-between
 		align-items: center
+
+.arrow svg path
+	transition: all ease 0.5s
 
 .arrow:hover svg path
 	stroke: $main1Color
